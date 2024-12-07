@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CaseCobra-Dev-Clone
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-13.5.6-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.2.2-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.3-38B2AC)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-First, run the development server:
+casecobra-dev-clone ist eine moderne Web-Anwendung zur Personalisierung von Handyhüllen. Mit dem Design-Konfigurator können Benutzer ihre eigenen, einzigartigen Handyhüllen erstellen.
+
+## ✨ Features
+
+- 🎨 Intuitiver Design-Konfigurator
+- 📱 3D-Vorschau in Echtzeit
+- 🖼️ Einfacher Bild-Upload
+- 📐 Präzise Design-Anpassungen
+- 💾 Automatische Speicherung
+- 📱 Responsive Benutzeroberfläche
+
+## 🚧 In Entwicklung
+
+- 💳 Integriertes Bezahlsystem
+- 📦 Versandabwicklung und Tracking
+
+## 🚀 Schnellstart
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Repository klonen
+git clone https://github.com/Taris87/casecobra.git
+
+# In das Projektverzeichnis wechseln
+cd casecobra
+
+# Abhängigkeiten installieren
+pnpm install
+
+# Entwicklungsserver starten
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Die Anwendung ist dann unter [http://localhost:3000](http://localhost:3000) verfügbar.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📖 Dokumentation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Ausführliche Dokumentation finden Sie im [docs](./docs) Ordner:
 
-## Learn More
+- [Installation](./docs/installation.md)
+- [Benutzung](./docs/usage.md)
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Technologie-Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework:** Next.js 13 mit App Router
+- **Sprache:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI-Komponenten:** shadcn/ui
+- **Datenbank:** Prisma
+- **3D-Rendering:** Three.js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## made with ❤️ by [Taris](https://github.com/Taris87)

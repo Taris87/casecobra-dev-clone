@@ -57,10 +57,8 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
 
   const handleCheckout = () => {
     if (user) {
-      // create payment session
       createPaymentSession({ configId: id })
     } else {
-      // need to log in
       localStorage.setItem('configurationId', id)
       setIsLoginModalOpen(true)
     }
@@ -151,9 +149,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
                 <div className="my-2 h-px bg-gray-200" />
 
                 <div className="flex items-center justify-between py-2">
-                  <p className="font-semibold text-gray-900">
-                    Gesamt Bestellung
-                  </p>
+                  <p className="font-semibold text-gray-900">Gesamt</p>
                   <p className="font-semibold text-gray-900">
                     {formatPrice(totalPrice / 100)}
                   </p>

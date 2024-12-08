@@ -60,7 +60,7 @@ export const createCheckoutSession = async ({
     name: 'Custom iPhone Case',
     images: [configuration.imageUrl],
     default_price_data: {
-      currency: 'USD',
+      currency: 'EUR',
       unit_amount: price,
     },
   })

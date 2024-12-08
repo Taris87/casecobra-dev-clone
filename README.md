@@ -41,18 +41,15 @@ Die Anwendung ist dann unter [http://localhost:3000](http://localhost:3000) verf
 
 ## 📖 Dokumentation
 
-Ausführliche Dokumentation finden Sie im [docs](./docs) Ordner:
-
-- [Installation](./docs/installation.md)
-- [Benutzung](./docs/usage.md)
-
 ## 🛠️ Technologie-Stack
 
-- **Framework:** Next.js 13 mit App Router
+- **Framework:** Next.js 14 mit App Router
 - **Sprache:** TypeScript
 - **Styling:** Tailwind CSS
+- **Authentifizierung:** Kinde Auth
 - **UI-Komponenten:** shadcn/ui
-- **Datenbank:** Prisma
+- **Datenbank:** PostgreSQL mit Prisma
+- **Bildupload:** UploadThing
 - **3D-Rendering:** Three.js
 
 ## made with ❤️ by [Taris](https://github.com/Taris87)

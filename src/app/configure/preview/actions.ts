@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use server'
 
 import { BASE_PRICE, PRODUCT_PRICES } from '@/config/products'

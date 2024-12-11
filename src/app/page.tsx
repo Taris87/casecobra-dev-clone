@@ -15,7 +15,7 @@ export default function Home() {
             <div className="relative mx-auto flex flex-col items-center text-center lg:items-start lg:text-left">
               <div className="absolute -top-20 left-0 hidden w-28 lg:block">
                 <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-slate-50 via-slate-50/10" />
-                <img src="/snake-1.png" className="w-full" />
+                <img alt='snake' src="/snake-1.png" className="w-full" />
               </div>
               <h1 className="relative mt-16 w-fit text-balance text-5xl font-bold !leading-tight tracking-tight text-gray-900 md:text-6xl lg:text-7xl">
                 Ihr Bild auf einer{' '}

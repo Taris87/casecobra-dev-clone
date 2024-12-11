@@ -1,4 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import type { Metadata } from 'next'
 import { Recursive } from 'next/font/google'
 import './globals.css'

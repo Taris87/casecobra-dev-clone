@@ -16,12 +16,6 @@ const ThankYou = () => {
     queryFn: async () => await getPaymentStatus({ orderId }),
     retry: true,
     retryDelay: 500,
-    select: (data) => {
-      if (!orderId) {
-        throw new Error('Order ID is required')
-      }
-      return data
-    }
   })
 
   if (data === undefined) {

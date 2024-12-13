@@ -19,34 +19,33 @@ const LoginModal = ({
 }) => {
   return (
     <Dialog onOpenChange={setIsOpen} open={isOpen}>
-      <DialogContent className="absolute z-[9999999]">
+      <DialogContent className='absolute z-[9999999]'>
         <DialogHeader>
-          <div className="relative mx-auto mb-2 h-24 w-24">
+          <div className='relative mx-auto w-24 h-24 mb-2'>
             <Image
-              src="/snake-1.png"
-              alt="snake image"
-              className="object-contain"
+              src='/snake-1.png'
+              alt='snake image'
+              className='object-contain'
               fill
             />
           </div>
-          <DialogTitle className="text-center text-3xl font-bold tracking-tight text-gray-900">
-            Anmelden zum Fortfahren!
+          <DialogTitle className='text-3xl text-center font-bold tracking-tight text-gray-900'>
+            Log in to continue
           </DialogTitle>
-          <DialogDescription className="py-2 text-center text-base">
-            <span className="font-medium text-zinc-900">
-              Deine Konfiguration wurde gespeichert!
+          <DialogDescription className='text-base text-center py-2'>
+            <span className='font-medium text-zinc-900'>
+              Your configuration was saved!
             </span>{' '}
-            Bitte melde dich an oder erstelle eine Konto, um deine Bestellung
-            abzuschließen.
+            Please login or create an account to complete your purchase.
           </DialogDescription>
         </DialogHeader>
 
-        <div className="grid grid-cols-2 gap-6 divide-x divide-gray-200">
+        <div className='grid grid-cols-2 gap-6 divide-x divide-gray-200'>
           <LoginLink className={buttonVariants({ variant: 'outline' })}>
-            Anmelden
+            Login
           </LoginLink>
           <RegisterLink className={buttonVariants({ variant: 'default' })}>
-            Konto erstellen
+            Sign up
           </RegisterLink>
         </div>
       </DialogContent>

@@ -1,4 +1,3 @@
-
 'use server'
 
 import { BASE_PRICE, PRODUCT_PRICES } from '@/config/products'
@@ -6,8 +5,6 @@ import { db } from '@/db'
 import { stripe } from '@/lib/stripe'
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
 import { Order } from '@prisma/client'
-import { log } from 'console'
-import { create } from 'domain'
 
 export const createCheckoutSession = async ({
   configId,
@@ -38,52 +35,32 @@ export const createCheckoutSession = async ({
 
   let order: Order | undefined = undefined
 
-  try {
-    // Sicherstellen, dass user und configuration vorhanden sind
-    if (!user?.id || !configuration?.id) {
-      throw new Error('Benutzer oder Konfiguration fehlt')
-    }
+  const existingOrder = await db.order.findFirst({
+    where: {
+      userId: user.id,
+      configurationId: configuration.id,
+    },
+  })
 
-    // Überprüfe, ob bereits eine Bestellung existiert
-    const existingOrder = await db.order.findFirst({
-      where: {
+  console.log(user.id, configuration.id)
+
+  if (existingOrder) {
+    order = existingOrder
+  } else {
+    order = await db.order.create({
+      data: {
+        amount: price / 100,
         userId: user.id,
         configurationId: configuration.id,
       },
     })
-
-    if (existingOrder) {
-      // Wenn Bestellung existiert, setze die vorhandene Bestellung
-      order = existingOrder
-    } else {
-      // Ansonsten erstelle eine neue Bestellung
-      order = await db.order.create({
-        data: {
-          amount: price / 100, // Beispiel: Preis in Euro
-          userId: user.id,
-          configurationId: configuration.id,
-          status: 'awaiting_shipment', // Standardstatus
-        },
-      })
-    }
-
-    // Optional: Überprüfe, ob die Bestellung erfolgreich erstellt oder gefunden wurde
-    if (order) {
-      console.log('Bestellung erfolgreich:', order)
-    } else {
-      throw new Error('Bestellung konnte nicht erstellt oder gefunden werden')
-    }
-  } catch (error) {
-    console.error('Fehler bei der Bestellung:', error)
-    // Optional: Fehler weiterwerfen oder behandeln
-    throw error
   }
 
   const product = await stripe.products.create({
-    name: 'Personalisierte Handyhülle',
+    name: 'Custom iPhone Case',
     images: [configuration.imageUrl],
     default_price_data: {
-      currency: 'EUR',
+      currency: 'USD',
       unit_amount: price,
     },
   })

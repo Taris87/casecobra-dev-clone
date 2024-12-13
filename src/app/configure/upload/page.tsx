@@ -1,13 +1,13 @@
 'use client'
 
+import { Progress } from '@/components/ui/progress'
+import { useToast } from '@/components/ui/use-toast'
+import { useUploadThing } from '@/lib/uploadthing'
 import { cn } from '@/lib/utils'
-import { ImageIcon, Loader2, MousePointerSquareDashed } from 'lucide-react'
+import { Image, Loader2, MousePointerSquareDashed } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 import { useState, useTransition } from 'react'
 import Dropzone, { FileRejection } from 'react-dropzone'
-import { Progress } from '@/components/ui/progress'
-import { useUploadThing } from '@/lib/uploadthing'
-import { useRouter } from 'next/navigation'
-import { useToast } from '@/components/ui/use-toast'
 
 const Page = () => {
   const { toast } = useToast()
@@ -27,17 +27,18 @@ const Page = () => {
     },
   })
 
-  const onDropRejectex = (rejectedFiles: FileRejection[]) => {
+  const onDropRejected = (rejectedFiles: FileRejection[]) => {
     const [file] = rejectedFiles
 
     setIsDragOver(false)
 
     toast({
-      title: `${file.file.type} Datei typ nicht unterstützt.`,
-      description: 'Bitte versuche es mit einer PNG, JPEG oder JPG Datei.',
-      variant: 'destructive',
+      title: `${file.file.type} type is not supported.`,
+      description: "Please choose a PNG, JPG, or JPEG image instead.",
+      variant: "destructive"
     })
   }
+
   const onDropAccepted = (acceptedFiles: File[]) => {
     startUpload(acceptedFiles, { configId: undefined })
 
@@ -49,73 +50,61 @@ const Page = () => {
   return (
     <div
       className={cn(
-        'relative my-16 flex size-full flex-1 flex-col items-center justify-center rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:rounded-2xl',
+        'relative h-full flex-1 my-16 w-full rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:rounded-2xl flex justify-center flex-col items-center',
         {
-          'bg-blue-900/10 ring-blue-900/25': isDragOver,
+          'ring-blue-900/25 bg-blue-900/10': isDragOver,
         }
-      )}
-    >
-      <div className="relative flex w-full flex-1 flex-col items-center justify-center">
+      )}>
+      <div className='relative flex flex-1 flex-col items-center justify-center w-full'>
         <Dropzone
-          onDropRejected={onDropRejectex}
+          onDropRejected={onDropRejected}
           onDropAccepted={onDropAccepted}
           accept={{
-            'image/*': ['.jpg', '.jpeg', '.png'],
+            'image/png': ['.png'],
+            'image/jpeg': ['.jpeg'],
+            'image/jpg': ['.jpg'],
           }}
           onDragEnter={() => setIsDragOver(true)}
-          onDragLeave={() => setIsDragOver(false)}
-        >
+          onDragLeave={() => setIsDragOver(false)}>
           {({ getRootProps, getInputProps }) => (
             <div
-              className="flex size-full flex-1 flex-col items-center justify-center"
-              {...getRootProps()}
-            >
+              className='h-full w-full flex-1 flex flex-col items-center justify-center'
+              {...getRootProps()}>
               <input {...getInputProps()} />
               {isDragOver ? (
-                <MousePointerSquareDashed className="mb-2 size-6 text-zinc-500" />
+                <MousePointerSquareDashed className='h-6 w-6 text-zinc-500 mb-2' />
               ) : isUploading || isPending ? (
-                <Loader2 className="mb-2 size-6 animate-spin text-zinc-500" />
+                <Loader2 className='animate-spin h-6 w-6 text-zinc-500 mb-2' />
               ) : (
-                <ImageIcon
-                  width={24}
-                  height={24}
-                  className="mb-2 size-6 text-zinc-500"
-                />
+                <Image className='h-6 w-6 text-zinc-500 mb-2' />
               )}
-              <div className="mb-2 flex flex-col justify-center text-sm text-zinc-700">
+              <div className='flex flex-col justify-center mb-2 text-sm text-zinc-700'>
                 {isUploading ? (
-                  <div className="flex flex-col items-center">
+                  <div className='flex flex-col items-center'>
                     <p>Hochladen...</p>
                     <Progress
                       value={uploadProgress}
-                      className="mt-2 h-2 w-40 bg-gray-300"
+                      className='mt-2 w-40 h-2 bg-gray-300'
                     />
                   </div>
                 ) : isPending ? (
-                  <div className="flex flex-col items-center">
-                    <p>Weiterleiten, bitte warten...</p>
+                  <div className='flex flex-col items-center'>
+                    <p>Redirecting, please wait...</p>
                   </div>
                 ) : isDragOver ? (
                   <p>
-                    <span className="font-semibold">
-                      Die Datei hier ablegen
-                    </span>
-                    , um sie hochzuladen.
+                    <span className='font-semibold'>Bild ablegen</span> zum Hochladen
                   </p>
                 ) : (
                   <p>
-                    <span className="font-semibold">
-                      Klicken zum Hochladen{' '}
-                    </span>
-                    <span className="font-bold text-green-600">oder </span>
-                    <span className="font-semibold">
-                      die Datei hier ablegen.
-                    </span>
+                    <span className='font-semibold'>Klicken</span> <span className='font-semibold text-green-600 '>oder</span> ziehen Sie
+                    das Bild hierher
                   </p>
                 )}
               </div>
+
               {isPending ? null : (
-                <p className="text-xs text-zinc-500">PNG, JPG, JPEG</p>
+                <p className='text-xs text-zinc-500'>PNG, JPG, JPEG</p>
               )}
             </div>
           )}

@@ -1,6 +1,6 @@
 // bg-blue-950 border-blue-950
 // bg-zinc-900 border-zinc-900
-// bg-rose-700 border-rose-700
+// bg-rose-950 border-rose-950
 
 import { PRODUCT_PRICES } from '@/config/products'
 
@@ -11,7 +11,7 @@ export const COLORS = [
     value: 'blue',
     tw: 'blue-950',
   },
-  { label: 'Rose', value: 'rose', tw: 'rose-700' },
+  { label: 'Rose', value: 'rose', tw: 'rose-950' },
 ] as const
 
 export const MODELS = {
@@ -48,15 +48,15 @@ export const MATERIALS = {
   name: 'material',
   options: [
     {
-      label: 'Silikon',
+      label: 'Silicone',
       value: 'silicone',
       description: undefined,
       price: PRODUCT_PRICES.material.silicon,
     },
     {
-      label: 'Weiches Polycarbonat',
+      label: 'Soft Polycarbonate',
       value: 'polycarbonate',
-      description: 'kratzfeste Beschichtung',
+      description: 'Scratch-resistant coating',
       price: PRODUCT_PRICES.material.polycarbonate,
     },
   ],
@@ -66,15 +66,15 @@ export const FINISHES = {
   name: 'finish',
   options: [
     {
-      label: 'glatte Oberfläche',
+      label: 'Smooth Finish',
       value: 'smooth',
       description: undefined,
       price: PRODUCT_PRICES.finish.smooth,
     },
     {
-      label: 'Textur',
+      label: 'Textured Finish',
       value: 'textured',
-      description: 'weiche, griffige Oberfläche',
+      description: 'Soft grippy texture',
       price: PRODUCT_PRICES.finish.textured,
     },
   ],

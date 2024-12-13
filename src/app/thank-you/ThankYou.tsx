@@ -16,6 +16,12 @@ const ThankYou = () => {
     queryFn: async () => await getPaymentStatus({ orderId }),
     retry: true,
     retryDelay: 500,
+    select: (data) => {
+      if (!orderId) {
+        throw new Error('Order ID is required')
+      }
+      return data
+    }
   })
 
   if (data === undefined) {
@@ -29,7 +35,7 @@ const ThankYou = () => {
       </div>
     )
   }
-
+  
   if (data === false) {
     return (
       <div className='w-full mt-24 flex justify-center'>
@@ -41,7 +47,7 @@ const ThankYou = () => {
       </div>
     )
   }
-
+ 
   const { configuration, billingAddress, shippingAddress, amount } = data
   const { color } = configuration
 

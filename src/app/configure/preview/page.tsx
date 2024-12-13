@@ -19,7 +19,7 @@ const Page = async ({ searchParams }: PageProps) => {
     where: { id },
   })
 
-  if (!configuration) {
+  if(!configuration) {
     return notFound()
   }
 

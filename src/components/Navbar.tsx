@@ -57,7 +57,7 @@ const Navbar = async () => {
                     size: 'sm',
                     variant: 'ghost',
                   })}>
-                  Anmelden
+                  Regestrieren
                 </Link>
 
                 <Link

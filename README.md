@@ -52,4 +52,4 @@ Die Anwendung ist dann unter [http://localhost:3000](http://localhost:3000) verf
 - **Bildupload:** UploadThing
 - **3D-Rendering:** Three.js
 
-## made with ❤️ by [Taris](https://github.com/Taris87)
+## made with ❤️ by [Steven](https://github.com/Taris87)

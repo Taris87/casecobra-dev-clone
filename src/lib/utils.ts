@@ -36,6 +36,6 @@ export function constructMetadata({
     },
 
     icons,
-    metadataBase: new URL('https://casecobra-dev-clone.vercel.app/'),
+    metadataBase: new URL('https://casecobra-dev-clone-5ortqkt39-taris87s-projects.vercel.app'),
   }
 }

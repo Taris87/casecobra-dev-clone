@@ -98,10 +98,12 @@ export default function Home() {
           <div className="col-span-full mt-32 flex h-fit w-full justify-center px-8 sm:px-16 md:px-0 lg:col-span-1 lg:mx-0 lg:mt-20">
             <div className="relative md:max-w-xl">
               <img
+                alt=''
                 src="/your-image.png"
                 className="absolute -top-20 left-56 hidden w-40 select-none sm:block lg:hidden lg:w-52 xl:block"
               />
               <img
+                alt=''
                 src="/line.png"
                 className="absolute -bottom-6 -left-6 w-20 select-none"
               />
@@ -123,7 +125,7 @@ export default function Home() {
               </span>{' '}
               sagen
             </h2>
-            <img src="/snake-2.png" className="order-0 w-24 lg:order-2" />
+            <img alt='' src="/snake-2.png" className="order-0 w-24 lg:order-2" />
           </div>
 
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2">
@@ -224,12 +226,14 @@ export default function Home() {
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="relative flex grid-cols-2 flex-col items-center gap-40 md:grid">
               <img
+                alt=""
                 src="/arrow.png"
                 className="absolute left-1/2 top-[25rem] z-10 -translate-x-1/2 -translate-y-1/2 rotate-90 md:top-1/2 md:rotate-0"
               />
 
               <div className="relative h-80 w-full max-w-sm rounded-xl bg-gray-900/5 ring-inset ring-gray-900/10 md:h-full md:justify-self-end lg:rounded-2xl">
                 <img
+                  alt=""
                   src="/horse.jpg"
                   className="h-full w-full rounded-md bg-white object-cover shadow-2xl ring-1 ring-gray-900/10"
                 />

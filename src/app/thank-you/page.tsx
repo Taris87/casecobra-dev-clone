@@ -1,9 +1,9 @@
 import { Suspense } from 'react'
 import ThankYou from './ThankYou'
 
-const Page = () => {
+const Page: React.FC = () => {
   return (
-    <Suspense>
+    <Suspense fallback={<div>Loading...</div>}>
       <ThankYou />
     </Suspense>
   )

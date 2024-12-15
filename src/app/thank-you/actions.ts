@@ -11,12 +11,12 @@ export const getPaymentStatus = async ({ orderId }: { orderId: string }) => {
     throw new Error('You need to be logged in to view this page.')
   }
 
-  const order = await db.order.findFirst({
+  const order = await db.order.findUnique({
     where: { id: orderId, userId: user.id },
     include: {
-      billingAddress: true,
-      configuration: true,
-      shippingAddress: true,
+      billingAddress: true||null,
+      configuration: true||null,
+      shippingAddress: true||null,
       user: true,
     },
   })

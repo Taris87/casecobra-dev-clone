@@ -90,7 +90,7 @@ const Page = () => {
                   </div>
                 ) : isPending ? (
                   <div className='flex flex-col items-center'>
-                    <p>Redirecting, please wait...</p>
+                    <p>Weiterleiten, bitte warten...</p>
                   </div>
                 ) : isDragOver ? (
                   <p>

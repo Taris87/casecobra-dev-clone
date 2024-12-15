@@ -224,7 +224,7 @@ const DesignConfigurator = ({
 
           <div className='px-8 pb-12 pt-8'>
             <h2 className='tracking-tight font-bold text-3xl'>
-              Customize your case
+              Erstelle deine Hülle
             </h2>
 
             <div className='w-full h-px bg-zinc-200 my-6' />
@@ -239,7 +239,7 @@ const DesignConfigurator = ({
                       color: val,
                     }))
                   }}>
-                  <Label>Color: {options.color.label}</Label>
+                  <Label>Farbe: {options.color.label}</Label>
                   <div className='mt-3 flex items-center space-x-3'>
                     {COLORS.map((color) => (
                       <RadioGroup.Option
@@ -395,7 +395,7 @@ const DesignConfigurator = ({
                 }
                 size='sm'
                 className='w-full'>
-                Continue
+                Weiter
                 <ArrowRight className='h-4 w-4 ml-1.5 inline' />
               </Button>
             </div>

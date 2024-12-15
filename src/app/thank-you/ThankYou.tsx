@@ -55,7 +55,7 @@ console.log(orderId)
         <div className='max-w-xl'>
           <p className='text-base font-bold text-primary'>Danke!</p>
           <h1 className='mt-2 text-4xl font-bold tracking-tight sm:text-5xl'>
-            Dein Case ist auf dem Weg!
+            Deine Hülle ist auf dem Weg!
           </h1>
           <p className='mt-2 text-base text-zinc-500'>
            Deine Bestellung wird von uns bearbeitet.
@@ -70,13 +70,10 @@ console.log(orderId)
         <div className='mt-10 border-t border-zinc-200'>
           <div className='mt-10 flex flex-auto flex-col'>
             <h4 className='font-semibold text-zinc-900'>
-              Du hast eine gute Wahl gemacht!
+              Du hast eine gute Wahl getroffen!
             </h4>
             <p className='mt-2 text-sm text-zinc-600'>
-              Wir bei CaseCobra glauben, dass ein Phone Case nicht nur ansehen
-              braucht, sondern auch langlebig nutzen kann. Wir bieten eine 5-Jahres
-              Druckgarantie: Wenn dein Case nicht der hochwertigsten Qualität
-              entspricht, werden wir es kostenlos erneut versenden.
+            Wir bei CaseCobra glauben, dass eine Handyhülle nicht nur gut aussehen, sondern auch langlebig und zuverlässig sein sollte. Daher bieten wir eine 5-Jahres-Druckgarantie: Sollte deine Handyhülle nicht unseren höchsten Qualitätsstandards entsprechen, senden wir dir kostenlos eine neue zu.
             </p>
           </div>
         </div>

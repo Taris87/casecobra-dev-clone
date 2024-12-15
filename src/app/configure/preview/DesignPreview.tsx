@@ -89,11 +89,11 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
 
         <div className='mt-6 sm:col-span-9 md:row-end-1'>
           <h3 className='text-3xl font-bold tracking-tight text-gray-900'>
-            Your {modelLabel} Case
+            Deine {modelLabel} Hülle
           </h3>
           <div className='mt-3 flex items-center gap-1.5 text-base'>
             <Check className='h-4 w-4 text-green-500' />
-            In stock and ready to ship
+            Auf Lager
           </div>
         </div>
 
@@ -102,17 +102,17 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
             <div>
               <p className='font-medium text-zinc-950'>Highlights</p>
               <ol className='mt-3 text-zinc-700 list-disc list-inside'>
-                <li>Wireless charging compatible</li>
-                <li>TPU shock absorption</li>
-                <li>Packaging made from recycled materials</li>
-                <li>5 year print warranty</li>
+                <li>Drahtloses Laden kompatibel</li>
+                <li>TPU-Schockabsorption</li>
+                <li>Verpackung aus recycelten Materialien</li>
+                <li>5 Jahre Druckgarantie</li>
               </ol>
             </div>
             <div>
               <p className='font-medium text-zinc-950'>Materials</p>
               <ol className='mt-3 text-zinc-700 list-disc list-inside'>
-                <li>High-quality, durable material</li>
-                <li>Scratch- and fingerprint resistant coating</li>
+                <li>Hochwertiges, langlebiges Material</li>
+                <li>Kratz- und fingerabdruckresistente Beschichtung</li>
               </ol>
             </div>
           </div>
@@ -121,7 +121,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
             <div className='bg-gray-50 p-6 sm:rounded-lg sm:p-8'>
               <div className='flow-root text-sm'>
                 <div className='flex items-center justify-between py-1 mt-2'>
-                  <p className='text-gray-600'>Base price</p>
+                  <p className='text-gray-600'>Grund Preis</p>
                   <p className='font-medium text-gray-900'>
                     {formatPrice(BASE_PRICE / 100)}
                   </p>
@@ -129,7 +129,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
 
                 {finish === 'textured' ? (
                   <div className='flex items-center justify-between py-1 mt-2'>
-                    <p className='text-gray-600'>Textured finish</p>
+                    <p className='text-gray-600'>Beschichtung</p>
                     <p className='font-medium text-gray-900'>
                       {formatPrice(PRODUCT_PRICES.finish.textured / 100)}
                     </p>
@@ -138,7 +138,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
 
                 {material === 'polycarbonate' ? (
                   <div className='flex items-center justify-between py-1 mt-2'>
-                    <p className='text-gray-600'>Soft polycarbonate material</p>
+                    <p className='text-gray-600'>Weiches Polycarbonat-Material</p>
                     <p className='font-medium text-gray-900'>
                       {formatPrice(PRODUCT_PRICES.material.polycarbonate / 100)}
                     </p>
@@ -148,7 +148,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
                 <div className='my-2 h-px bg-gray-200' />
 
                 <div className='flex items-center justify-between py-2'>
-                  <p className='font-semibold text-gray-900'>Order total</p>
+                  <p className='font-semibold text-gray-900'>Gesamt</p>
                   <p className='font-semibold text-gray-900'>
                     {formatPrice(totalPrice / 100)}
                   </p>

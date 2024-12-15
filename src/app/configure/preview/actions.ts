@@ -57,16 +57,16 @@ export const createCheckoutSession = async ({
   }
 
   const product = await stripe.products.create({
-    name: 'Custom iPhone Case',
+    name: 'Personalisierte Handy hülle',
     images: [configuration.imageUrl],
     default_price_data: {
-      currency: 'USD',
+      currency: 'EUR',
       unit_amount: price,
     },
   })
 
   const stripeSession = await stripe.checkout.sessions.create({
-    success_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/thank-you?orderId=${order.id || ''}`,
+    success_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/thank-you?orderId=${order.id}`,
     cancel_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/configure/preview?id=${configuration.id}`,
     payment_method_types: ['card', 'paypal'],
     mode: 'payment',

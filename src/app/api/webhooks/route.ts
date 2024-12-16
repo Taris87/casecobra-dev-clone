@@ -5,7 +5,10 @@ import { NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { Resend } from 'resend'
 import OrderReceivedEmail from '@/components/emails/OrderReceivedEmail'
-
+import { metadata } from '@/app/layout'
+import { Users } from 'lucide-react'
+import app from 'next/app'
+console.log('Bin drin in webhooks')
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: Request) {
@@ -22,7 +25,7 @@ export async function POST(req: Request) {
       signature,
       process.env.STRIPE_WEBHOOK_SECRET!
     )
-
+    
     if (event.type === 'checkout.session.completed') {
       if (!event.data.object.customer_details?.email) {
         throw new Error('Missing user email')
@@ -34,7 +37,7 @@ export async function POST(req: Request) {
         userId: null,
         orderId: null,
       }
-
+      console.log('metadata', {metadata})
       if (!userId || !orderId) {
         throw new Error('Invalid request metadata')
       }

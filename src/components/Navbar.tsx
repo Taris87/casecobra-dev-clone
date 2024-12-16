@@ -45,7 +45,7 @@ const Navbar = async () => {
                     size: 'sm',
                     className: 'hidden sm:flex items-center gap-1',
                   })}>
-                  Create case
+                  Hülle erstellen
                   <ArrowRight className='ml-1.5 h-5 w-5' />
                 </Link>
               </>

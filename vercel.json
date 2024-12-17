@@ -1,0 +1,20 @@
+{
+    "redirects": [
+      {
+        "source": "/configure/:path*",
+        "destination": "https://casecobra-dev-clone.vercel.app/configure/:path*",
+        "permanent": true
+      },
+      {
+        "source": "/api/:path*",
+        "destination": "https://casecobra-dev-clone.vercel.app/api/:path*",
+        "permanent": true
+      },
+      {
+        "source": "/auth-callback/:path*",
+        "destination": "https://casecobra-dev-clone.vercel.app/auth-callback/:path*",
+        "permanent": true
+      }
+    ]
+  }
+  

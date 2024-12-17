@@ -34,18 +34,18 @@ const LoginModal = ({
           </DialogTitle>
           <DialogDescription className='text-base text-center py-2'>
             <span className='font-medium text-zinc-900'>
-              Your configuration was saved!
+              Deine Konfiguration wurde gespeichert!
             </span>{' '}
-            Please login or create an account to complete your purchase.
+            Bitte melde dich an oder erstelle eine Konto, um deinen Einkauf abzuschließen.
           </DialogDescription>
         </DialogHeader>
 
         <div className='grid grid-cols-2 gap-6 divide-x divide-gray-200'>
           <LoginLink className={buttonVariants({ variant: 'outline' })}>
-            Login
+            Anmelden
           </LoginLink>
           <RegisterLink className={buttonVariants({ variant: 'default' })}>
-            Sign up
+            Regestrieren
           </RegisterLink>
         </div>
       </DialogContent>

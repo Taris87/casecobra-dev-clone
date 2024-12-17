@@ -1,7 +1,7 @@
 {
     "redirects":[{
-        "source": "/configure/:path*",
-        "destination": "https://casecobra-dev-clone.vercel.app/configure/:path*",
+        "source": "/:path*",
+        "destination": "https://casecobra-dev-clone.vercel.app/:path*",
         "permanent": true
     }]
 }

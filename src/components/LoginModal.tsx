@@ -30,7 +30,7 @@ const LoginModal = ({
             />
           </div>
           <DialogTitle className='text-3xl text-center font-bold tracking-tight text-gray-900'>
-            Log in to continue
+            Melde dich an zum Bestellen
           </DialogTitle>
           <DialogDescription className='text-base text-center py-2'>
             <span className='font-medium text-zinc-900'>

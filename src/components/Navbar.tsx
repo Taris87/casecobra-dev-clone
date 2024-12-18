@@ -27,7 +27,7 @@ const Navbar = async () => {
                     size: 'sm',
                     variant: 'ghost',
                   })}>
-                  Sign out
+                  Abmelden
                 </Link>
                 {isAdmin ? (
                   <Link
@@ -45,7 +45,7 @@ const Navbar = async () => {
                     size: 'sm',
                     className: 'hidden sm:flex items-center gap-1',
                   })}>
-                  Create case
+                  Hülle erstellen
                   <ArrowRight className='ml-1.5 h-5 w-5' />
                 </Link>
               </>
@@ -57,7 +57,7 @@ const Navbar = async () => {
                     size: 'sm',
                     variant: 'ghost',
                   })}>
-                  Sign up
+                  Regestrieren
                 </Link>
 
                 <Link
@@ -66,7 +66,7 @@ const Navbar = async () => {
                     size: 'sm',
                     variant: 'ghost',
                   })}>
-                  Login
+                  Anmelden
                 </Link>
 
                 <div className='h-8 w-px bg-zinc-200 hidden sm:block' />
@@ -77,7 +77,7 @@ const Navbar = async () => {
                     size: 'sm',
                     className: 'hidden sm:flex items-center gap-1',
                   })}>
-                  Create case
+                  Hülle erstellen
                   <ArrowRight className='ml-1.5 h-5 w-5' />
                 </Link>
               </>

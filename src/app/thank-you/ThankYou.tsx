@@ -11,7 +11,7 @@ import { formatPrice } from '@/lib/utils'
 const ThankYou = () => {
   const searchParams = useSearchParams()
   const orderId = searchParams.get('orderId') || ''
-console.log(orderId)
+
   const { data } = useQuery({
     queryKey: ['get-payment-status'],
 
@@ -20,8 +20,7 @@ console.log(orderId)
     retryDelay: 500,
     
   })
-  console.log({data})
- console.log(data?.valueOf())
+ 
   if (data === undefined) {
     return (
       <div className='w-full mt-24 flex justify-center'>
@@ -33,7 +32,7 @@ console.log(orderId)
       </div>
     )
   }
-  console.log(data?.valueOf(), 'ich bin nicht undefined')
+  
   if (data === false) {
     return (
       <div className='w-full mt-24 flex justify-center'>
@@ -45,7 +44,7 @@ console.log(orderId)
       </div>
     )
   }
- console.log('ich bin nicht false')
+ 
   const { configuration, billingAddress, shippingAddress, amount } = data
   const { color } = configuration
 

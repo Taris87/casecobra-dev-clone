@@ -3,6 +3,7 @@ import MaxWidthWrapper from './MaxWidthWrapper'
 import { buttonVariants } from './ui/button'
 import { ArrowRight } from 'lucide-react'
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
+import { url } from 'inspector'
 
 const Navbar = async () => {
   const { getUser } = getKindeServerSession()
@@ -22,7 +23,7 @@ const Navbar = async () => {
             {user ? (
               <>
                 <Link
-                  href='/api/auth/logout'
+                  href={`${process.env.NEXT_PUBLIC_SERVER_URL}/api/auth/logout`}
                   className={buttonVariants({
                     size: 'sm',
                     variant: 'ghost',
@@ -31,7 +32,7 @@ const Navbar = async () => {
                 </Link>
                 {isAdmin ? (
                   <Link
-                    href='/dashboard'
+                    href={`${process.env.NEXT_PUBLIC_SERVER_URL}/configure/dasboard`}
                     className={buttonVariants({
                       size: 'sm',
                       variant: 'ghost',
@@ -40,7 +41,7 @@ const Navbar = async () => {
                   </Link>
                 ) : null}
                 <Link
-                  href='/configure/upload'
+                  href={`${process.env.NEXT_PUBLIC_SERVER_URL}/configure/upload`}
                   className={buttonVariants({
                     size: 'sm',
                     className: 'hidden sm:flex items-center gap-1',
@@ -52,7 +53,7 @@ const Navbar = async () => {
             ) : (
               <>
                 <Link
-                  href='/api/auth/register'
+                  href={`${process.env.NEXT_PUBLIC_SERVER_URL}/api/auth/register`}
                   className={buttonVariants({
                     size: 'sm',
                     variant: 'ghost',
@@ -61,7 +62,7 @@ const Navbar = async () => {
                 </Link>
 
                 <Link
-                  href='/api/auth/login'
+                  href={`${process.env.NEXT_PUBLIC_SERVER_URL}/api/auth/login`}
                   className={buttonVariants({
                     size: 'sm',
                     variant: 'ghost',
@@ -72,7 +73,7 @@ const Navbar = async () => {
                 <div className='h-8 w-px bg-zinc-200 hidden sm:block' />
 
                 <Link
-                  href='/configure/upload'
+                  href={`${process.env.NEXT_PUBLIC_SERVER_URL}/configure/upload`}
                   className={buttonVariants({
                     size: 'sm',
                     className: 'hidden sm:flex items-center gap-1',

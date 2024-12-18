@@ -21,5 +21,5 @@ export async function middleware(req) {
 
 // Definieren Sie die Routen, auf die die Middleware angewendet werden soll
 export const config = {
-  matcher: ['/api/:path*', '/dashboard'],
+  matcher: ['/api/auth/:path*'],
 };

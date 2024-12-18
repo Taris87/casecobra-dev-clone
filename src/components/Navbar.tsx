@@ -32,7 +32,7 @@ const Navbar = async () => {
                 </Link>
                 {isAdmin ? (
                   <Link
-                    href={`${process.env.NEXT_PUBLIC_SERVER_URL}/configure/dasboard`}
+                    href={`${process.env.NEXT_PUBLIC_SERVER_URL}/app/dashboard`}
                     className={buttonVariants({
                       size: 'sm',
                       variant: 'ghost',

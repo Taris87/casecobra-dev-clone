@@ -2,7 +2,7 @@
 
 import { useQuery } from '@tanstack/react-query'
 import { useEffect, useState } from 'react'
-import { getAuthStatus } from './action'
+import { getAuthStatus } from './actions'
 import { useRouter } from 'next/navigation'
 import { Loader2 } from 'lucide-react'
 
@@ -35,8 +35,8 @@ const Page = () => {
     <div className='w-full mt-24 flex justify-center'>
       <div className='flex flex-col items-center gap-2'>
         <Loader2 className='h-8 w-8 animate-spin text-zinc-500' />
-        <h3 className='font-semibold text-xl'>Du wirst Eingeloggt...</h3>
-        <p>Wir werden dich Automatich weiterleiten.</p>
+        <h3 className='font-semibold text-xl'>Du wirst angemeldet...</h3>
+        <p>Du wirst in wenigen Sekunden weitergeleitet.</p>
       </div>
     </div>
   )

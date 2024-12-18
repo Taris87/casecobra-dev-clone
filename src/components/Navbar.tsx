@@ -4,7 +4,6 @@ import { buttonVariants } from './ui/button'
 import { ArrowRight } from 'lucide-react'
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
 
-
 const Navbar = async () => {
   const { getUser } = getKindeServerSession()
   const user = await getUser()
@@ -28,7 +27,7 @@ const Navbar = async () => {
                     size: 'sm',
                     variant: 'ghost',
                   })}>
-                  Ausloggen
+                  Sign out
                 </Link>
                 {isAdmin ? (
                   <Link
@@ -46,7 +45,7 @@ const Navbar = async () => {
                     size: 'sm',
                     className: 'hidden sm:flex items-center gap-1',
                   })}>
-                  Hülle erstellen
+                  Create case
                   <ArrowRight className='ml-1.5 h-5 w-5' />
                 </Link>
               </>
@@ -58,7 +57,7 @@ const Navbar = async () => {
                     size: 'sm',
                     variant: 'ghost',
                   })}>
-                  Regestrieren
+                  Sign up
                 </Link>
 
                 <Link
@@ -67,7 +66,7 @@ const Navbar = async () => {
                     size: 'sm',
                     variant: 'ghost',
                   })}>
-                  Anmelden
+                  Login
                 </Link>
 
                 <div className='h-8 w-px bg-zinc-200 hidden sm:block' />
@@ -78,7 +77,7 @@ const Navbar = async () => {
                     size: 'sm',
                     className: 'hidden sm:flex items-center gap-1',
                   })}>
-                  Hülle erstellen
+                  Create case
                   <ArrowRight className='ml-1.5 h-5 w-5' />
                 </Link>
               </>

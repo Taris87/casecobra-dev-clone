@@ -1,8 +1,6 @@
 import { handleAuth } from '@kinde-oss/kinde-auth-nextjs/server';
 
-export const config = {
-  runtime: 'edge', // Ensure this is set to edge
-};
+export const runtime = 'edge'; // Set the runtime directly
 
 export const GET = async (req) => {
   // Handle preflight request
